@@ -80,3 +80,105 @@ button:hover {
   font-size: 18px;
   text-align: center;
 }
+
+.demo-notice {
+  background: #fff3cd;
+  color: #856404;
+  padding: 12px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ffeaa7;
+  text-align: center;
+}
+
+.demo-notice a {
+  color: #856404;
+  font-weight: bold;
+}
+
+.project-info {
+  margin-top: 40px;
+  padding: 25px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+}
+
+.project-info h2, .project-info h3 {
+  color: #2a7f62;
+  margin-top: 20px;
+}
+
+.project-info h2 {
+  margin-top: 0;
+}
+
+.project-info ul {
+  padding-left: 20px;
+}
+
+.project-info li {
+  margin-bottom: 8px;
+}
+
+.cta-buttons {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 5px 10px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #2a7f62;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #245e4f;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #545b62;
+}
+
+.author-section {
+  margin-top: 40px;
+  padding: 25px;
+  background: #2a7f62;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.author-section h3 {
+  margin-top: 0;
+  color: white;
+}
+
+.contact-links {
+  margin-top: 15px;
+}
+
+.contact-links a {
+  color: #a8d5c8;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.contact-links a:hover {
+  color: white;
+}

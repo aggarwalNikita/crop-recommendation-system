@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation System - Demo</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Crop Recommendation System 🌾</h1>
+        <p class="demo-notice">
+            <strong>Demo Version:</strong> This is a static demonstration of the interface. 
+            <a href="https://github.com/aggarwalNikita/crop-recommendation-system" target="_blank">
+                View the full working project on GitHub
+            </a>
+        </p>
+        
+        <form id="cropForm">
+            <label>Temperature (°C): <span class="range-info">Range: 20-28°C</span></label>
+            <input type="number" step="0.1" name="temperature" placeholder="e.g., 25.0" min="15" max="35" required>
+
+            <label>Humidity (%): <span class="range-info">Range: 60-80%</span></label>
+            <input type="number" step="0.1" name="humidity" placeholder="e.g., 70.0" min="40" max="95" required>
+
+            <label>pH: <span class="range-info">Range: 6.0-6.5</span></label>
+            <input type="number" step="0.1" name="ph" placeholder="e.g., 6.2" min="5.0" max="8.0" required>
+
+            <label>Rainfall (mm): <span class="range-info">Range: 600-1200mm</span></label>
+            <input type="number" step="0.1" name="rainfall" placeholder="e.g., 800.0" min="200" max="2000" required>
+
+            <label>District: <span class="range-info">Select from available districts</span></label>
+            <select name="district" required>
+                <option value="">Select District</option>
+                <option value="1">Durg</option>
+                <option value="2">Bastar</option>
+                <option value="3">Raipur</option>
+                <option value="4">Bilaspur</option>
+                <option value="5">Raigarh</option>
+                <option value="6">Surguja</option>
+                <option value="7">Jabalpur</option>
+                <option value="8">Balaghat</option>
+                <option value="9">Chhindwara</option>
+                <option value="10">Narsinghpur</option>
+            </select>
+
+            <button type="submit">Recommend Crop (Demo)</button>
+        </form>
+
+        <div id="result" class="result" style="display: none;">
+            <p id="prediction-text"></p>
+        </div>
+
+        <div class="project-info">
+            <h2>🎯 About This Project</h2>
+            <p>This is a machine learning-based crop recommendation system that helps farmers make data-driven decisions.</p>
+            
+            <h3>✨ Features:</h3>
+            <ul>
+                <li>🤖 Random Forest Classifier for predictions</li>
+                <li>🌍 Support for 311 Indian districts</li>
+                <li>📊 Real-time crop recommendations</li>
+                <li>📈 Yield information and insights</li>
+            </ul>
+
+            <h3>🚀 Technologies Used:</h3>
+            <ul>
+                <li>Backend: Python, Flask</li>
+                <li>Machine Learning: scikit-learn</li>
+                <li>Data Processing: Pandas, NumPy</li>
+                <li>Frontend: HTML5, CSS3</li>
+            </ul>
+
+            <div class="cta-buttons">
+                <a href="https://github.com/aggarwalNikita/crop-recommendation-system" class="btn btn-primary" target="_blank">
+                    📖 View Source Code
+                </a>
+                <a href="https://github.com/aggarwalNikita/crop-recommendation-system/blob/main/README.md" class="btn btn-secondary" target="_blank">
+                    📋 Read Documentation
+                </a>
+            </div>
+        </div>
+
+        <footer class="author-section">
+            <h3>👨‍💻 Author & Developer</h3>
+            <p><strong>NIKITA</strong></p>
+            <p>Full Stack Developer & Data Scientist</p>
+            <div class="contact-links">
+                <a href="mailto:nikita.aggarwal@email.com">📧 Email</a>
+                <a href="https://github.com/aggarwalNikita" target="_blank">🐙 GitHub</a>
+                <a href="https://linkedin.com/in/nikita-aggarwal" target="_blank">🔗 LinkedIn</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('cropForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const temp = document.querySelector('input[name="temperature"]').value;
+            const humidity = document.querySelector('input[name="humidity"]').value;
+            const ph = document.querySelector('input[name="ph"]').value;
+            const rainfall = document.querySelector('input[name="rainfall"]').value;
+            const district = document.querySelector('select[name="district"]').value;
+            
+            if (!temp || !humidity || !ph || !rainfall || !district) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            // Demo simulation based on input ranges
+            let crop = 'Rice';
+            let yield_info = '750 kg/ha';
+            
+            if (parseFloat(temp) < 23 && parseFloat(rainfall) < 900) {
+                crop = 'Wheat';
+                yield_info = '450 kg/ha';
+            } else if (parseFloat(temp) > 26 && parseFloat(humidity) < 70) {
+                crop = 'Cotton';
+                yield_info = '600 kg/ha';
+            } else if (parseFloat(rainfall) < 700) {
+                crop = 'Maize';
+                yield_info = '550 kg/ha';
+            }
+            
+            const resultDiv = document.getElementById('result');
+            const predictionText = document.getElementById('prediction-text');
+            
+            predictionText.innerHTML = `🌱 Recommended Crop: ${crop}<br>📊 Average Yield: ${yield_info}<br><br>
+                <small><em>This is a demo simulation. For actual predictions, run the full application locally using the source code.</em></small>`;
+            
+            resultDiv.style.display = 'block';
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
