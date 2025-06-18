@@ -177,8 +177,11 @@ button:hover {
   text-decoration: none;
   margin: 0 15px;
   font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .contact-links a:hover {
   color: white;
+  text-decoration: underline;
 }
