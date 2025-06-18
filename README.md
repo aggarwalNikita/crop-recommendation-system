@@ -178,8 +178,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 - 🌟 Passionate about agricultural technology and machine learning
 - 🎯 Focused on creating solutions that help farmers make better decisions
-- 📧 Contact: nikita.aggarwal@email.com
-- 🔗 LinkedIn: [linkedin.com/in/nikita-aggarwal](https://linkedin.com/in/nikita-aggarwal)
+- 📧 Contact: mailaggarwalnikita@gmail.com
+- 🔗 LinkedIn: [linkedin.com/in/aggarwalnikita](https://www.linkedin.com/in/aggarwalnikita)
 - 🐙 GitHub: [github.com/aggarwalNikita](https://github.com/aggarwalNikita)
 
 ## 🙏 Acknowledgments
